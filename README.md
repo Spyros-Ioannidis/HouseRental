@@ -10,7 +10,7 @@
 | **PHP** | Έκδοση **8.2 ή νεότερη**. Λήψη από την [επίσημη ιστοσελίδα της PHP](https://www.php.net/downloads.php). |
 | **Composer** | Λήψη από την [επίσημη ιστοσελίδα του Composer](https://getcomposer.org/download/). |
 | **Node.js και NPM** | Λήψη της έκδοσης **LTS** από την [επίσημη ιστοσελίδα του Node.js](https://nodejs.org/). Το NPM εγκαθίσταται μαζί με το Node.js. |
-| **MySQL** | Εκδοση 8.4.8 ή 8.4.10 LTS. Λήψη του από την  [επίσημη ιστοσελιδα του MySQL](https://dev.mysql.com/downloads/mysql/). |
+| **MySQL** | Εκδοση 8.4.10 LTS. Λήψη του από την  [επίσημη ιστοσελιδα του MySQL](https://dev.mysql.com/downloads/mysql/). |
 | **WampServer** *(προαιρετικά για Windows)* | Περιλαμβάνει Apache, PHP και MySQL/MariaDB. Λήψη από την [επίσημη ιστοσελίδα του WampServer](https://www.wampserver.com/). |
 
 > Σε εγκατάσταση Windows με WampServer δεν είναι απαραίτητη η ξεχωριστή εγκατάσταση PHP, MySQL και Apache, εφόσον οι εκδόσεις που περιλαμβάνει είναι συμβατές με την εφαρμογή.
@@ -33,11 +33,29 @@ composer install
 npm install
 ```
 
-Δημιουργήστε το αρχείο `.env` από το `.env.example`:
+
+
+Δημιουργήστε το αρχείο .env από το .env.example.
+
+Η εντολή εξαρτάται από το terminal που χρησιμοποιείται.
+Windows Command Prompt
+
+```bash
+copy .env.example .env
+```
+
+Windows PowerShell
+
+```bash
+Copy-Item .env.example .env
+```
+
+macOS, Linux ή Git Bash
 
 ```bash
 cp .env.example .env
 ```
+
 
 Στη συνέχεια, εκτελέστε:
 
@@ -88,7 +106,7 @@ php artisan migrate:fresh --seed --seeder=ProductionSeeder
 
 Κατεβάστε και εγκαταστήστε το Mailpit ακολουθώντας τις οδηγίες που παρέχονται στην [επίσημη ιστοσελίδα εγκατάστασης του Mailpit](https://mailpit.axllent.org/docs/install/).
 
-Μετά την εγκατάσταση, ανοίξτε ένα νέο terminal και εκτελέστε:
+Μετά την εγκατάσταση, ανοίξτε ένα νέο terminal στον φάκελο που είναι εγκατεστημένο και εκτελέστε:
 
 ```bash
 mailpit
