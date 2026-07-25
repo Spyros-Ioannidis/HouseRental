@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["resources/js/*"]
+        },
+        "checkJs": false
+    },
+    "include": ["resources/js/**/*", "../../../../Users/spyro/Documents/[0] Personal Files/Visual Studio Code/(000) Codex/0_temp/InputText.jsx", "../../../../Users/spyro/Documents/[0] Personal Files/Visual Studio Code/(000) Codex/0_temp/InputText copy.jsx", "../../../../Users/spyro/Documents/[0] Personal Files/Visual Studio Code/(000) Codex/0_temp/InputSelect.jsx"]
+}

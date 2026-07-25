@@ -1,0 +1,30 @@
+{
+    "dark_mode": false,
+    "tabs": [
+        {
+            "name": "Serve",
+            "path": "C:\\wamp64\\www\\Laravel\\HouseRental",
+            "command": "php artisan serve"
+        },
+        {
+            "name": "Npm",
+            "path": "C:\\wamp64\\www\\Laravel\\HouseRental",
+            "command": "npm run dev"
+        },
+        {
+            "name": "Tinker",
+            "path": "C:\\wamp64\\www\\Laravel\\HouseRental",
+            "command": ""
+        }
+    ],
+    "apps": [
+        {
+            "name": "Wamp",
+            "path": "C:\\wamp64\\wampmanager.exe"
+        },
+        {
+            "name": "VSCode",
+            "path": "C:\\Users\\spyro\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+        }
+    ]
+}

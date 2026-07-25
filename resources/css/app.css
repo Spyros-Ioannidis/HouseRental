@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+@source '../**/*.jsx';
+
+@theme {
+    --font-sans:
+        "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+/* @tailwind base;
+@tailwind components; */
+@tailwind utilities;
+
+@layer base {
+    html.dark {
+        color-scheme: dark;
+    }
+
+    body {
+        @apply bg-white text-gray-950 dark:bg-gray-950 dark:text-gray-100;
+    }
+}
+
+
+
+:root {
+    --color-primary: #4f46e5; /* indigo-500 */
+    --color-primary-hover: #4338ca; /* indigo-600 */
+    --color-secondary: #f3f4f6; /* gray-100 */
+    --color-text: #374151; /* gray-700 */
+    --color-text-light: #6b7280; /* gray-500 */
+    --color-bg: #f9fafb; /* gray-100 */
+    --color-bg-alt: #ffffff;
+
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+
+
+
+    --shadow-cst-lg: 0 0 20px rgba(0, 0, 0, 0.15);
+    --shadow-cst-xl: 0 0 30px rgba(0, 0, 0, 0.3);
+
+}
+
+/* [data-theme="dark"] {
+    --color-primary: #000000;
+} */
+
+
+@layer utilities {
+    /* Shadows */
+    .gradient {
+        @apply bg-linear-to-r from-indigo-950 to-indigo-900
+    }
+    .gradient-hover:hover {
+        @apply from-indigo-900 to-indigo-800;
+    }
+
+    .shadow-cst-lg {
+        @apply shadow-[0_0_20px_rgba(0,0,0,0.15)];
+    }
+
+    .shadow-cst-xl {
+        /* @apply shadow-[0_0_30px_rgba(0,0,0,0.3)]; */
+        box-shadow:  0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .shadow-cst-xl-hover:hover {
+        /* @apply shadow-[0_0_30px_rgba(0,0,0,0.3)]; */
+        box-shadow:  0 0 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn {
+        @apply rounded-xl px-6 py-2 font-semibold text-white shadow-lg cursor-pointer hover:shadow-xl focus:ring-4 focus:ring-indigo-200;
+        transition: all 0.2s;
+    }
+
+    /* Background Color */
+    .bg-color-primary { /* Contens need to be applied directly inside of .inputField-style-primary if changed (cannot be rendered directly) */
+        @apply bg-white dark:bg-gray-950
+    }
+    .bg-color-card {
+        @apply bg-white dark:bg-gray-900
+    }
+
+
+    /* Text COllor */
+    .text-color-primary {
+        @apply text-gray-800 dark:text-white
+    }
+
+    .text-color-primary-hover {
+        @apply  hover:text-indigo-700 dark:hover:text-indigo-700
+    }
+
+    .text-color-secondary {
+        @apply text-gray-600 dark:text-gray-400
+    }
+
+
+    /* Border COllor */
+    .border-color-primary {
+        @apply border-gray-700  dark:border-gray-800
+    }
+
+
+    .border-color-card {
+        @apply border-gray-300  dark:border-[#2e424f]
+    } /* dark:border-gray-800 */
+
+
+
+
+    .inputField-primary {
+        @apply rounded-md border px-4 py-2 transition-all focus:ring outline-none
+    }
+
+    .inputField-style-primary {/* background is contents of bg-color-primary(cannot be rendered directly) */
+        @apply bg-white dark:bg-gray-950 border-indigo-500  focus:ring-indigo-700
+    }
+
+    .inputField-style-error {
+        @apply bg-red-100 border-red-500 dark:bg-red-900 focus:ring-red-700;
+    }
+
+    .inputField-style-isDirty {
+        @apply bg-orange-100 border-orange-500 dark:bg-orange-800 focus:ring-orange-700;
+    }
+
+    .inputField-disabled {
+        @apply bg-orange-100 border-orange-500 dark:bg-orange-800 focus:ring-orange-700;
+    }
+
+
+    /* var(--darkreader-border-cfdbe3, #2e424f) */
+
+    /* .border-primary {
+        @apply
+    }
+
+    .border-secondary {
+        @apply
+    } */
+
+}
